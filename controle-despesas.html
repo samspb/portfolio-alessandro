@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./style.css" />
+    <title>Controle de despesas</title>
+  </head>
+
+  <body>
+    <div class="border p-4 m-2 rounded">
+      <h2 class="bg-secondary text-light m-2 p-4 rounded">CONTROLE DE DESPESAS</h2>
+
+      <div class="container p-4 border rounded">
+        <h4>Saldo atual</h4>
+        
+        <h1 id="balance" class="balance">R$ 0.00</h1>
+  
+        <div class="inc-exp-container">
+          <div>
+            <h4>Receitas</h4>
+            <p id="money-plus" class="money plus">+ R$0.00</p>
+          </div>
+  
+          <div>
+            <h4>Despesas</h4>
+            <p id="money-minus" class="money minus">- R$0.00</p>
+          </div>
+        </div>
+  
+        <h3>Transações</h3>
+        
+        <ul id="transactions" class="transactions">
+           <li class="minus">
+            Salário <span>-$400</span><button class="delete-btn">x</button>
+          </li> 
+        </ul>
+  
+        <h3>Adicionar transação</h3>
+        
+        <form id="form">
+          <div class="form-control mb-2 pb-4">
+            <label for="text">Nome</label>
+            <input autofocus type="text" id="text" placeholder="Nome da transação" />
+          </div>
+  
+          <div class="form-control pb-4">
+            <label for="amount">Valor <br />
+              <small>(negativo - despesas, positivo - receitas)</small>
+            </label>
+            <input type="number" id="amount" placeholder="Valor da transação" />
+          </div>
+  
+          <button class="btn">Adicionar</button>
+        </form>
+  
+        <div class="info alert alert-warning">
+          <p>O programa é básico e bem simples de usar, sendo necessário apenas adicionar transações
+             de receitas e despesas com seus respectivos nomes e valores, utilizando um sinal de 
+             menos para representar as despesas, por exemplo: "Nome da transação: cartão de crédito,
+             valor da transação: -400,00". Além disso, o programa calcula automaticamente o saldo atual
+             com base na soma total de receitas e despesas. Para armazenar os dados localmente, 
+             foi utilizada a API LocalStorage do navegador, uma vez que ainda não domino banco de dados. 
+             Essa API permite armazenar dados localmente no dispositivo do usuário, tornando a solução 
+             bastante prática e fácil de implementar.
+          </p>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
+
+    
